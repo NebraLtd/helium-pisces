@@ -1,4 +1,4 @@
-name: "nebra-helium-pisces"
+name: nebra-helium-pisces
 type: sw.application
 description: >-
   Manage your Pisces P100 Helium Gateway remotely using Nebra and balenaCloud.
