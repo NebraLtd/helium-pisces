@@ -2,3 +2,5 @@
 
 # helium-pisces
 Balena OpenFleet for Pisces P100 Miners
+
+[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/NebraLtd/helium-pisces)
