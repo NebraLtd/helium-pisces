@@ -9,10 +9,9 @@ services:
       - diagnostics
     environment:
       - FIRMWARE_VERSION=2023.02.07.0-14
-      - FIRMWARE_SHORT_HASH=7699774
+      - FIRMWARE_SHORT_HASH=a28d482
       - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
       - DBUS_SESSION_BUS_ADDRESS=unix:path=/session/dbus/session_bus_socket
-    restart: on-failure
     privileged: true
     network_mode: host
     cap_add:
@@ -38,7 +37,7 @@ services:
       - nebra:/var/nebra
     environment:
       - FIRMWARE_VERSION=2023.02.07.0-14
-      - FIRMWARE_SHORT_HASH=7699774
+      - FIRMWARE_SHORT_HASH=a28d482
     labels:
       io.balena.features.sysfs: 1
       io.balena.features.procfs: 1
@@ -79,7 +78,7 @@ services:
     environment:
       - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/session/dbus/session_bus_socket
       - FIRMWARE_VERSION=2023.02.07.0-14
-      - FIRMWARE_SHORT_HASH=7699774
+      - FIRMWARE_SHORT_HASH=a28d482
 
   diagnostics:
     image: nebraltd/hm-diag:803a1ee
@@ -87,7 +86,7 @@ services:
       - dbus-session
     environment:
       - FIRMWARE_VERSION=2023.02.07.0-14
-      - FIRMWARE_SHORT_HASH=7699774
+      - FIRMWARE_SHORT_HASH=a28d482
       - DIAGNOSTICS_VERSION=803a1ee
       - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
     volumes:
@@ -105,7 +104,6 @@ services:
       - /dev/ttyUSB1:/dev/ttyUSB1
       - /dev/ttyUSB2:/dev/ttyUSB2
       - /dev/ttyUSB3:/dev/ttyUSB3
-    restart: always
     privileged: true
     labels:
       io.balena.features.sysfs: 1
@@ -121,7 +119,7 @@ services:
     environment:
       - DBUS_ADDRESS=unix:path=/session/dbus/session_bus_socket
       - FIRMWARE_VERSION=2023.02.07.0-14
-      - FIRMWARE_SHORT_HASH=7699774
+      - FIRMWARE_SHORT_HASH=a28d482
 
 volumes:
   miner-storage:
